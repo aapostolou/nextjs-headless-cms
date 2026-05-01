@@ -1,0 +1,8 @@
+{
+  "generic": {
+    "metadata": {
+      "title": "NextJS Headless CMS",
+      "description": "A NextJS application with a custom Headless CMS using Supabase"
+    }
+  }
+}
