@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
-import './normalize.css';
+import './normalize.css'
 
-import { getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server'
+
+import { MuiThemeProvider } from '@/components/mui-theme-provider'
+import { SupabaseAuthProviderWrapper } from '@/components/supabase-auth-provider'
 
 export default async function RootLayout({
   children,
@@ -14,7 +17,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        <MuiThemeProvider>
+          <SupabaseAuthProviderWrapper>{children}</SupabaseAuthProviderWrapper>
+        </MuiThemeProvider>
+      </body>
     </html>
   )
 }

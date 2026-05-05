@@ -1,11 +1,13 @@
 import 'server-only'
 
+import { createCmsUsersDatabase } from './createCmsUsersTable'
 import { createCollectionsDatabase } from './createCollectionsTable'
 
-export async function initializeDatabase() {
-  console.log('\nDatabase Migration :: Start\n')
+export async function initializeSupabase() {
+  console.log('\nSupabase Migration :: Start\n')
 
   await createCollectionsDatabase()
+  await createCmsUsersDatabase()
 
-  console.log('\nDatabase Migration :: End\n')
+  console.log('\nSupabase Migration :: End\n')
 }

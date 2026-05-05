@@ -1,4 +1,4 @@
-import { getAllCollections } from '@/supabase/api/collections'
+import { getAllCollections } from '@/supabase/services/collections'
 
 export async function GET() {
   const result = await getAllCollections()

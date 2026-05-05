@@ -1,4 +1,4 @@
-import { getCollection } from '@/supabase/api/collections'
+import { getCollection } from '@/supabase/services/collections'
 
 export async function GET(
   request: Request,

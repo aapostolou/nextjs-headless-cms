@@ -27,3 +27,12 @@ export type CollectionUpdateOptions = Partial<Collection> &
 export type CollectionResult<T = never> =
   | { success: false; error: string }
   | ([T] extends [never] ? { success: true } : { success: true; data: T })
+
+export type CmsRole = 'admin' | 'moderator' | 'editor'
+
+export type CmsUser = {
+  id: number
+  created_at: string // timestamptz - Example value: "2024-05-20T15:30:00+00:00"
+  user_id: number
+  role: CmsRole
+}
